@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom'; 
 import { toast } from 'react-hot-toast';
+import formImg from '../images/form-img.png'
 
 function RegisterPage() {
     const [username, setUsername] = useState('');
@@ -31,7 +32,7 @@ function RegisterPage() {
         <>
             <div className="form-container">
                 <div className="form-img">
-                    <img src="../../images/form-img.png" alt=" reg img" />
+                    <img src={formImg} alt=" reg img" />
                 </div>
                 <form action="" className="register" onSubmit={register}>
                     <h1>Register</h1>

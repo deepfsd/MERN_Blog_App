@@ -2,6 +2,7 @@ import { useState, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserContext } from '../UserContext';
 import { toast } from 'react-hot-toast';
+import formImg from '../images/form-img.png'
  
 function LoginPage() {
     const [username, setUsername] = useState('');
@@ -37,7 +38,7 @@ function LoginPage() {
     return (
         <div className="form-container">
             <div className="form-img">
-                <img src="../../images/form-img.png" alt="log img " />
+                <img src={formImg} alt="login img " />
             </div>
             <form action="" className="login" onSubmit={login}>
                 <h1>Login</h1>
