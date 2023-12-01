@@ -5,9 +5,9 @@ import { toast } from 'react-hot-toast';
 
 function Header() {
     const { setUserInfo, userInfo } = useContext(UserContext);
-
+// http://localhost:4000
     useEffect(() => {
-        fetch('http://localhost:4000/profile', {
+        fetch('https://blogger-backend-8mon.onrender.com/profile', {
             credentials: 'include',
         }).then(res => {
             res.json().then(userInfo => {
@@ -17,7 +17,7 @@ function Header() {
     }, []);
 
     function logout() {
-        fetch('http://localhost:4000/logout', {
+        fetch('https://blogger-backend-8mon.onrender.com/logout', {
             credentials: 'include',
             method: 'POST',
         });
