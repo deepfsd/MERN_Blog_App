@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 import { formatISO9075 } from "date-fns";
 import {UserContext} from '../UserContext'
 
+// https://blogger-backend-8mon.onrender.com
+// http://localhost:4000
+
 function PostPage() {
     const [postInfo, setPostInfo] = useState(null);
     const { userInfo } = useContext(UserContext);

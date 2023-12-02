@@ -2,11 +2,13 @@ import { formatISO9075 } from 'date-fns';
 import { Link } from "react-router-dom";
 
 // http://localhost:4000
+// https://blogger-backend-8mon.onrender.com
+
 function Post({ _id, title, summary, cover, content, createdAt, author }) {
     return (
         <div className="post">
-            <Link to={`/post/${_id}`} className='post-img-cont'>https://blogger-backend-8mon.onrender.com/
-                <img src={'' + cover} alt="blog img" className='post-img' />
+            <Link to={`/post/${_id}`} className='post-img-cont'>
+                <img src={'https://blogger-backend-8mon.onrender.com/' + cover} alt="blog img" className='post-img' />
             </Link>
             <div className="texts">
                 <Link to={`/post/${_id}`}>

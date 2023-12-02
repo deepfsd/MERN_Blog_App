@@ -1,6 +1,9 @@
 import Post from "../Post";
 import { useEffect, useState } from "react";
 
+// https://blogger-backend-8mon.onrender.com
+// http://localhost:4000
+
 export default function IndexPage() {
     const [posts, setPosts] = useState([]);
     useEffect(() => {
