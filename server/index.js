@@ -17,8 +17,8 @@ const secret = process.env.SECRET_KEY;
 
 app.use(cors({
     credentials: true,
-    // origin: 'http://localhost:5173',
-    origin: 'https://blogger-mern-parveen.netlify.app/'
+    origin: 'http://localhost:5173',
+    // origin: 'https://blogger-mern-parveen.netlify.app/'
 }));
 app.use(express.json());
 app.use(cookieParser());
@@ -144,6 +144,10 @@ app.get('/post/:id', async (req, res) => {
     const { id } = req.params;
     const postDoc = await Post.findById(id).populate('author', ['username']);
     res.json(postDoc);
+})
+
+app.get('/' , (req, res) => {
+    res.send("HELLO FROM MERN BLOG APPLICATION")
 })
 
 app.listen(4000, () => {

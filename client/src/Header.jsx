@@ -7,7 +7,7 @@ function Header() {
     const { setUserInfo, userInfo } = useContext(UserContext);
 // http://localhost:4000
     useEffect(() => {
-        fetch('http://localhost:4000/profile', {
+        fetch('https://blogger-backend-8mon.onrender.com/profile', {
             credentials: 'include',
         }).then(res => {
             res.json().then(userInfo => {
