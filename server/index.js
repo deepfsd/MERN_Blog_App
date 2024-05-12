@@ -17,9 +17,7 @@ const secret = process.env.SECRET_KEY;
 
 app.use(cors({
     credentials: true,
-    // origin: 'http://localhost:5173',
-    // origin: 'https://blogger-mern-parveen.netlify.app/',
-    origin: 'https://blogger-frontend-tm4i.onrender.com'
+    origin: 'http://localhost:5173',
 }));
 app.use(express.json());
 app.use(cookieParser());

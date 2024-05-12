@@ -13,7 +13,7 @@ function PostPage() {
     const { id } = useParams();
 
     useEffect(() => {
-        fetch(`https://blogger-backend-8mon.onrender.com/post/${id}`)
+        fetch(`http://localhost:4000/post/${id}`)
             .then(response => {
                 response.json().then(postInfo => {
                     setPostInfo(postInfo);
@@ -42,7 +42,7 @@ function PostPage() {
                 </div>
             )}
             <div className="image">
-                <img src={`https://blogger-backend-8mon.onrender.com/${postInfo.cover}`} alt="" />
+                <img src={`http://localhost:4000/${postInfo.cover}`} alt="" />
             </div>
             <div className="content" dangerouslySetInnerHTML={{ __html: postInfo.content }} />
         </div>

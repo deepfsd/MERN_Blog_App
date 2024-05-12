@@ -10,7 +10,7 @@ function RegisterPage() {
 
     async function register(e) {
         e.preventDefault();
-        const response = await fetch('https://blogger-backend-8mon.onrender.com/register', {
+        const response = await fetch('http://localhost:4000/register', {
             method: 'POST',
             body: JSON.stringify({
                 username,

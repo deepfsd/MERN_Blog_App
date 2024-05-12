@@ -7,7 +7,7 @@ function Header() {
     const { setUserInfo, userInfo } = useContext(UserContext);
 // http://localhost:4000
     useEffect(() => {
-        fetch('https://blogger-backend-8mon.onrender.com/profile', {
+        fetch('http://localhost:4000/profile', {
             credentials: 'include',
         }).then(res => {
             res.json().then(userInfo => {
@@ -17,7 +17,7 @@ function Header() {
     }, []);
 
     function logout() {
-        fetch('https://blogger-backend-8mon.onrender.com/logout', {
+        fetch('http://localhost:4000/logout', {
             credentials: 'include',
             method: 'POST',
         });
